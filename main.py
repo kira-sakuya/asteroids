@@ -5,6 +5,8 @@ import pygame
 from constants import *
 import player
 
+# Pour avoir accès à pygame lancer dans le terminal "source venv/bin/activate"
+
 def main():
     #print("Starting asteroids!")
     #print(f"Screen width: {SCREEN_WIDTH}")
@@ -23,7 +25,7 @@ def main():
         ply.draw(screen)
         pygame.display.flip()
         dt = clock.tick(60) / 1000
-        
+        ply.update(dt)
 
 if __name__ == "__main__":
     main()
