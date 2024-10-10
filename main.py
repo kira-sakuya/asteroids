@@ -53,6 +53,10 @@ def main():
             if ply.collisions(a):
                 print("Game over!")
                 exit()
+            for s in shots:
+                if s.collisions(a):
+                    a.kill()
+                    s.kill()
 
 if __name__ == "__main__":
     main()
