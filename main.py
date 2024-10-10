@@ -40,6 +40,11 @@ def main():
         dt = clock.tick(60) / 1000
         for u in updatable:
             u.update(dt)
+        
+        for a in asteroids:
+            if ply.collisions(a):
+                print("Game over!")
+                exit()
 
 if __name__ == "__main__":
     main()
