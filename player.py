@@ -48,7 +48,7 @@ class Player(CircleShape):
     def shoot(self):
 
         if self.timer > 0:
-            return False
+            return 
         
         shot = Shot(self.position.x, self.position.y)
         shot.add(Shot.containers)
